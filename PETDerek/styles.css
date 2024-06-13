@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 22px; /* Aumenta el tamaño base del texto */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #383838;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-size: 24px; /* Ajusta el tamaño para los encabezados */
+}
+
+p {
+    font-size: 25px; /* Ajusta el tamaño para el texto del párrafo */
+}
+
+
+header {
+    background: #005f73;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%; /* Controla el ancho de las secciones */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: left; /* Asegura que el texto no esté centrado si no lo deseas */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background: #333;
+    color: #ffffff;
+}
+
+nav ul li a {
+    color: #ffffff;                /* Color del texto */
+    text-decoration: none;         /* Elimina el subrayado del enlace */
+    padding: 10px 15px;            /* Añade padding para hacer el enlace más grande */
+    border-radius: 8px;            /* Esquinas redondeadas */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el color de fondo y texto */
+    display: inline-block;         /* Asegura que el padding y border-radius se apliquen correctamente */
+    margin: 0 5px;                 /* Espaciado entre botones */
+    background-color: #005f73;     /* Color de fondo inicial */
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #339fd5;     /* Color de fondo al pasar el cursor o enfocar */
+    color: #ffffff;                /* Mantiene el color del texto blanco */
+}
+
+.responsive-image {
+    width: 100%;
+    max-width: 300px; /* Ajusta esto según el diseño de tu página */
+    height: auto;
+    border-radius: 10px; /* Esquinas redondeadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para transformar y sombra */
+    margin: 10px 0; /* Espacio antes y después de la imagen */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombreado inicial */
+}
+
+.responsive-image:hover {
+    transform: scale(1.1); /* La imagen crece un 10% */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4); /* Sombra más intensa al pasar el cursor */
+}
+
+.active-section {
+    background-color: #e0f7fa; /* Color de fondo para la sección activa, elige el color que prefieras */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+section {
+    transition: background-color 1s; /* Transición suave para el color de fondo */
+}
+
+.active-section {
+    background-color: #e0f7fa; /* Color de fondo para la sección activa */
+}
+
+.image-container {
+    text-align: center; /* Centra las imágenes que no son de bloque */
+}
+
+.responsive-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px; /* Cambia esto para ajustar el tamaño máximo de la imagen */
+    width: 100%; /* Asegura que la imagen sea responsiva */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+#backToTop {
+    position: fixed; /* Posicionamiento fijo */
+    bottom: 20px; /* 20 píxeles desde el fondo */
+    right: 20px; /* 20 píxeles desde la derecha */
+    padding: 10px 20px; /* Padding para tamaño */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #ffffff; /* Color de texto */
+    background-color: #005f73; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor como puntero */
+    display: none; /* Oculto por defecto */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        width: 90%; /* Más ancho para dispositivos móviles */
+    }
+}
